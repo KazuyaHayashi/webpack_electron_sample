@@ -1,6 +1,4 @@
-function greeter(person: string) {
-    return "Hello, " + person;
-}
+import greeter from './greeter';
 
 let user = "webpack";
 let element = document.createElement('div');
