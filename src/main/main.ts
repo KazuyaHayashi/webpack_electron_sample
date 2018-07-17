@@ -1,11 +1,11 @@
 const {app, BrowserWindow} = require('electron');
 
-let win;
+let win: any;
 
-function createWindow() {
+function createWindow(width: number, height: number) {
     win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: width,
+        height: height,
         webPreferences: {
             nodeIntegration: false
         }
@@ -26,6 +26,6 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
     if(win === null) {
-        createWindow();
+        createWindow(800, 600);
     }
 });

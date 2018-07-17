@@ -4,23 +4,51 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = [
     // For main process
     {
-        entry: './src/main/main.js',
-        node: {
-            __filename: false,
-            __dirname: false,
-        },
+        entry: './src/main/main.ts',
         output: {
             path: path.resolve(__dirname, 'dist/main'),
             filename: 'main.js'
+        },
+        devtool: "source-map",
+        module: {
+            rules: [
+                {
+                    test: /\.(ts|tsx)?$/,
+                    use: 'ts-loader',
+                    include: path.resolve(__dirname, 'src/'),
+                    exclude: /node_modules/
+                }
+            ]
+        },
+        resolve: {
+            extensions: [ '.tsx', '.ts', '.js' ]
+        },
+        node: {
+            __filename: false,
+            __dirname: false,
         },
         target: 'electron-main',
     },
     // For renderer process
     {
-        entry: './src/renderer/index.js',
+        entry: './src/renderer/renderer.ts',
         output: {
-            filename: 'renderer.js',
-            path: path.resolve(__dirname, 'dist/renderer')
+            path: path.resolve(__dirname, 'dist/renderer'),
+            filename: 'renderer.js'
+        },
+        devtool: "source-map",
+        module: {
+            rules: [
+                {
+                    test: /\.(ts|tsx)?$/,
+                    include: path.resolve(__dirname, 'src/'),
+                    use: 'ts-loader',
+                    exclude: /node_modules/
+                }
+            ]
+        },
+        resolve: {
+            extensions: [ '.tsx', '.ts', '.js' ]
         },
         target: 'electron-renderer',
         plugins: [
