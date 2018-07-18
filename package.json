@@ -8,8 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./dist ./build",
     "clean:all": "rm -rf ./dist ./build ./node_modules",
-    "start": "npm run build && electron .",
-    "build": "webpack"
+    "start": "yarn run build:webpack && electron .",
+    "build": "yarn run clean && yarn run build:webpack && yarn run build:installer",
+    "build:webpack": "webpack",
+    "build:installer": "electron-builder -wl"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +33,15 @@
     "win": {
       "target": "nsis",
       "icon": "misc/icons/windows.ico",
+      "files": [
+        "!tsconfig.json",
+        "!webpack.config.js",
+        "!node_modules",
+        "build"
+      ]
+    },
+    "linux": {
+      "target": "zip",
       "files": [
         "!tsconfig.json",
         "!webpack.config.js",
