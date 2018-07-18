@@ -6,7 +6,7 @@ const config = [
     {
         entry: './src/main/main.ts',
         output: {
-            path: path.resolve(__dirname, 'dist/main'),
+            path: path.resolve(__dirname, 'build/main'),
             filename: 'main.js'
         },
         devtool: "source-map",
@@ -33,7 +33,7 @@ const config = [
     {
         entry: './src/renderer/renderer.ts',
         output: {
-            path: path.resolve(__dirname, 'dist/renderer'),
+            path: path.resolve(__dirname, 'build/renderer'),
             filename: 'renderer.js'
         },
         devtool: "source-map",
@@ -54,7 +54,7 @@ const config = [
         plugins: [
             new HtmlWebpackPlugin({
                 template: 'src/html/index.html',
-                filename: path.resolve(__dirname, 'dist/html/index.html')
+                filename: path.resolve(__dirname, 'build/html/index.html')
             })
         ]
     }
