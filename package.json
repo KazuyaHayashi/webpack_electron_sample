@@ -2,7 +2,7 @@
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main/main.js",
+  "main": "build/main/main.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,10 +17,24 @@
   },
   "devDependencies": {
     "electron": "^2.0.5",
+    "electron-builder": "^20.22.0",
     "html-webpack-plugin": "^3.2.0",
     "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
     "webpack": "^4.16.0",
     "webpack-cli": "^3.0.8"
+  },
+  "build": {
+    "appId": "webpack-demo",
+    "win": {
+      "target": "nsis",
+      "icon": "misc/icons/windows.ico",
+      "files": [
+        "!tsconfig.json",
+        "!webpack.config.js",
+        "!node_modules",
+        "build"
+      ]
+    }
   }
 }
