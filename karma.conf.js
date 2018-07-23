@@ -2,20 +2,29 @@ module.exports = function(config) {
     config.set({
         browsers: ['Electron'],
 
-        frameworks: ['mocha'],
+        frameworks: ['mocha', "karma-typescript"],
 
         files: [
-            'tests/unit/*.js'
+            'tests/unit/*.ts'
         ],
 
         preprocessors: {
-            'tests/unit/*.js': ['webpack']
+            'tests/unit/*.ts': ['webpack', "karma-typescript"]
         },
 
         client: {
             useIframe: false
         },
 
-        logLevel: config.LOG_INFO
+        karmaTypescriptConfig: {
+            compilerOptions: {
+                lib: [
+                    "es2015",
+                    "dom"
+                ]
+            }
+        },
+
+        logLevel: config.LOG_DEBUG
     });
 }
