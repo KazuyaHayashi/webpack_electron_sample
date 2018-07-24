@@ -6,10 +6,6 @@
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "types": [
-      "node",
-      "mocha"
-    ],
     "allowJs": true
   },
   "include": [
