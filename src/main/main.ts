@@ -1,6 +1,6 @@
-const {app, BrowserWindow} = require('electron');
+import {app, BrowserWindow} from 'electron';
 
-let win: any;
+let win: Electron.BrowserWindow = null;
 
 function createWindow(width: number, height: number) {
     win = new BrowserWindow({
@@ -18,7 +18,9 @@ function createWindow(width: number, height: number) {
     });
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+    createWindow(800, 600);
+});
 
 app.on('window-all-closed', () => {
     app.quit();
