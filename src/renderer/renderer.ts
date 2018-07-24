@@ -1,7 +1,7 @@
-import greeter from './greeter';
+import greeter from "./greeter";
 
-let user = "webpack";
-let element = document.createElement('div');
+const user = "webpack";
+const element = document.createElement("div");
 
 element.innerHTML = greeter(user);
 
