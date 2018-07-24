@@ -5,11 +5,13 @@ module.exports = function(config) {
         frameworks: ['mocha', "karma-typescript"],
 
         files: [
+            'src/renderer/*.ts',
             'tests/unit/*.ts'
         ],
 
         preprocessors: {
-            'tests/unit/*.ts': ['webpack', "karma-typescript"]
+            'src/renderer/*.ts': ["karma-typescript"],
+            'tests/unit/*.ts': ["karma-typescript"]
         },
 
         client: {
