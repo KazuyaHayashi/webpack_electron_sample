@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:latest-browsers
+      - image: circleci/node:10.7.0-stretch-browsers
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -26,8 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: sudo apt-get update
-      - run: sudo apt-get install wine
+      - run: sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install wine wine32 wine64 libwine fonts-wine
       - run: yarn install
 
       - save_cache:
@@ -42,7 +41,7 @@ jobs:
 
       - run:
           name: Build installer
-          command: yarn run build
+          command: yarn run release
 
       - store_artifacts:
           path: dist
