@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:latest-browsers
+      - image: circleci/node:10.7.0-stretch-browsers
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -26,7 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: wget -nc https://dl.winehq.org/wine-builds/Release.key && sudo apt-key add Release.key && sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+      - run: wget -nc https://dl.winehq.org/wine-builds/Release.key && sudo apt-key add Release.key && sudo deb https://dl.winehq.org/wine-builds/debian/ stretch main
       - run: sudo apt-get update && sudo apt-get install --install-recommends winehq-stable
       - run: yarn install
 
