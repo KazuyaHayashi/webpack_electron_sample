@@ -26,8 +26,8 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: sudo apt-get update
-      - run: sudo apt-get install wine
+      - run: wget -nc https://dl.winehq.org/wine-builds/Release.key && sudo apt-key add Release.key && sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+      - run: sudo apt-get update && sudo apt-get install --install-recommends winehq-stable
       - run: yarn install
 
       - save_cache:
