@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Build installer
-          command: yarn run build
+          command: yarn run release
 
       - store_artifacts:
           path: dist
