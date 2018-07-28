@@ -26,8 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: wget -nc https://dl.winehq.org/wine-builds/Release.key && sudo apt-key add Release.key && sudo deb https://dl.winehq.org/wine-builds/debian/ stretch main
-      - run: sudo apt-get update && sudo apt-get install --install-recommends winehq-stable
+      - run: sudo apt update && sudo apt install wine wine64 libwine fonts-wine
       - run: yarn install
 
       - save_cache:
