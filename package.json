@@ -9,7 +9,8 @@
     "clean": "rm -rf ./dist ./build",
     "clean:all": "rm -rf ./dist ./build ./node_modules",
     "start": "yarn run build:webpack && electron .",
-    "build": "yarn run clean && yarn run build:webpack && yarn run build:installer",
+    "release": "yarn run clean && yarn run build:webpack && electron-builder -wl",
+    "release:local": "yarn run clean && yarn run build:webpack && yarn run build:installer",
     "build:webpack": "webpack",
     "build:installer": "electron-builder -wl"
   },
@@ -47,7 +48,8 @@
         "!webpack.config.js",
         "!node_modules",
         "build"
-      ]
+      ],
+      "publish": ["github"]
     },
     "linux": {
       "target": "zip",
@@ -56,7 +58,8 @@
         "!webpack.config.js",
         "!node_modules",
         "build"
-      ]
+      ],
+      "publish": ["github"]
     }
   }
 }
