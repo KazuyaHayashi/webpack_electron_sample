@@ -26,7 +26,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: sudo apt update && sudo apt install wine wine64 libwine fonts-wine
+      - run: sudo apt update && sudo apt install wine wine32 wine64 libwine fonts-wine
       - run: yarn install
 
       - save_cache:
