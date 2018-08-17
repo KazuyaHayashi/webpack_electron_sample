@@ -1,4 +1,4 @@
-import greeter from "./greeter";
+import {greeter} from "./greeter";
 
 const user = "webpack";
 const element = document.createElement("div");
