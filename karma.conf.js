@@ -1,7 +1,7 @@
 module.exports = function(config) {
     config.set({
 
-        reporters: ['progress', 'coverage'],
+        reporters: ['progress', "karma-typescript"],
 
         browsers: ['Electron'],
 
@@ -13,7 +13,7 @@ module.exports = function(config) {
         ],
 
         preprocessors: {
-            'src/renderer/*.ts': ["karma-typescript", 'coverage'],
+            'src/renderer/*.ts': ["karma-typescript"],
             'tests/unit/*.ts': ["karma-typescript"]
         },
 
