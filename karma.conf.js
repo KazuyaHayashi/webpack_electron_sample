@@ -1,5 +1,8 @@
 module.exports = function(config) {
     config.set({
+
+        reporters: ['progress', "karma-typescript"],
+
         browsers: ['Electron'],
 
         frameworks: ['mocha', "karma-typescript"],
