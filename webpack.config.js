@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = [
     // For main process
@@ -55,7 +56,11 @@ const config = [
             new HtmlWebpackPlugin({
                 template: 'src/html/index.html',
                 filename: path.resolve(__dirname, 'build/html/index.html')
-            })
+            }),
+            new CopyWebpackPlugin([{
+                from: 'src/assets/img/',
+                to: '../assets/img/'
+            }])
         ]
     }
 ];
