@@ -1,8 +1,6 @@
-import {greeter} from "./greeter";
+import Vue from "vue";
 
-const user = "webpack";
-const element = document.createElement("div");
-
-element.innerHTML = greeter(user);
-
-document.body.appendChild(element);
+const app = new Vue({
+    el: "#app",
+    render: (h) => h("p", "Hello World!"),
+});
