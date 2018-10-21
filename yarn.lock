@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.5.tgz#8a4accfc403c124a0bafe8a9fc61a05ec1032073"
   integrity sha512-lAVp+Kj54ui/vLUFxsJTMtWvZraZxum3w3Nwkble2dNuV5VnPA+Mi2oGX9XYJAaIvZi3tn3cbjS/qcJXRb6Bww==
 
-"@types/node@^10.11.7":
-  version "10.11.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.7.tgz#0e75ca9357d646ca754016ca1d68a127ad7e7300"
-  integrity sha512-yOxFfkN9xUFLyvWaeYj90mlqTJ41CsQzWKS3gXdOMOyPVacUsymejKxJ4/pMW7exouubuEeZLJawGgcNGYlTeg==
+"@types/node@^10.12.0":
+  version "10.12.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.0.tgz#ea6dcbddbc5b584c83f06c60e82736d8fbb0c235"
+  integrity sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
 
 "@types/node@^8.0.24":
   version "8.10.21"
@@ -1269,10 +1269,10 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-copy-webpack-plugin@^4.5.3:
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.3.tgz#14a224d205e46f7a79f7956028e1da6df2225ff2"
-  integrity sha512-VKCiNXQcc8zyznaepXfKpCH2cZD+/j3T3B+gsFY97P7qMlEsj34wr/sI9OCG7QPUUh7gAHVx3q8Q1rdQIDM4bA==
+copy-webpack-plugin@^4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.4.tgz#f2b2782b3cd5225535c3dc166a80067e7d940f27"
+  integrity sha512-0lstlEyj74OAtYMrDxlNZsU7cwFijAI3Ofz2fD6Mpo9r4xCv4yegfa3uHIKvZY1NSuOtE9nvG6TAhJ+uz9gDaQ==
   dependencies:
     cacache "^10.0.4"
     find-cache-dir "^1.0.0"
@@ -1789,10 +1789,10 @@ electron-updater@^3.1.2:
     semver "^5.5.1"
     source-map-support "^0.5.9"
 
-electron@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-3.0.4.tgz#9b45a0171ac424d4c134721c9cf2a891b99e80f2"
-  integrity sha512-GuZ4xCmV8wNNfkUAOdmOmgkYYaTQj5LATzc2i/b3MGhoXghnjECCgxo5yW+G2BeKM+R30cg69KA03tRzmIFxxQ==
+electron@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-3.0.5.tgz#5a6f105af3b6314636c7c27a25312602dd36eae6"
+  integrity sha512-rcHNbhSGfj80Av5p06LgIUxN8wQbrdx8yblikJamDezqxe0B11CJSEJuidz6TJoCRDZuWHt+P5xMAEhp92ZUcA==
   dependencies:
     "@types/node" "^8.0.24"
     electron-download "^4.1.0"
@@ -5463,10 +5463,10 @@ truncate-utf8-bytes@^1.0.0:
   dependencies:
     utf8-byte-length "^1.0.1"
 
-ts-loader@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-5.2.1.tgz#e6815c631dcafc24319ce8be6f8af94908749cf3"
-  integrity sha512-KC0cOvsFVyxBlg5h9jvaMlIL2tNsyQLvT2/OvIlO0AMUBJ4iXTtOfaDEqvmqv2lM/icekQfDsP2PsYBCDHpuOQ==
+ts-loader@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-5.2.2.tgz#a707849b08ca754cc46f5c7053e79fe1c84caf0e"
+  integrity sha512-vM/TrEKXBqRYq5yLatsXyKFnYSpv53klmGtrILGlNqcMsxPVi8+e4yr1Agbu9oMZepx/4szDVn5QpFo83IQdQg==
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^4.0.0"
@@ -5802,6 +5802,11 @@ void-elements@^2.0.0:
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
 
+vue-class-component@^6.3.2:
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.3.2.tgz#e6037e84d1df2af3bde4f455e50ca1b9eec02be6"
+  integrity sha512-cH208IoM+jgZyEf/g7mnFyofwPDJTM/QvBNhYMjqGB8fCsRyTf68rH2ISw/G20tJv+5mIThQ3upKwoL4jLTr1A==
+
 vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
@@ -5855,10 +5860,10 @@ webpack-sources@^1.3.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.20.2:
-  version "4.20.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.20.2.tgz#89f6486b6bb276a91b0823453d377501fc625b5a"
-  integrity sha512-75WFUMblcWYcocjSLlXCb71QuGyH7egdBZu50FtBGl2Nso8CK3Ej+J7bTZz2FPFq5l6fzCisD9modB7t30ikuA==
+webpack@^4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.21.0.tgz#bd03605c0f48c0d4aaaef78ead2769485e5afd92"
+  integrity sha512-CGBeop4AYR0dcmk9Afl33qQULwTHQCXQPAIBTHMJoy9DpY8FPUDna/NUlAGTr5o5y9QC901Ww3wCY4wNo1X9Lw==
   dependencies:
     "@webassemblyjs/ast" "1.7.8"
     "@webassemblyjs/helper-module-context" "1.7.8"
