@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const mainProcessConfig = {
     entry: './src/main/main.ts',
@@ -44,11 +45,18 @@ const rendererProcessConfig = {
                 include: path.resolve(__dirname, 'src/'),
                 use: 'ts-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.vue$/,
+                use: 'vue-loader'
             }
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [ '.tsx', '.ts', '.js' ],
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
     },
     target: 'electron-renderer',
     plugins: [
@@ -71,6 +79,7 @@ const rendererProcessConfig = {
             append: false,
             publicPath: '../'
         }),
+        new VueLoaderPlugin(),
     ]
 };
 
