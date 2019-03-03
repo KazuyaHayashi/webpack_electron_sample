@@ -29,10 +29,10 @@ export default {
 	components: {
 		BaseInputText, TodoListItem
 	},
-  data () {
-    return {
+	data () {
+		return {
 			newTodoText: '',
-      todos: [
+			todos: [
 				{
 					id: nextTodoId++,
 					text: 'Learn Vue'
@@ -46,8 +46,8 @@ export default {
 					text: 'Fall in love'
 				}
 			]
-    }
-  },
+		}
+	},
 	methods: {
 		addTodo () {
 			const trimmedText = this.newTodoText.trim()
