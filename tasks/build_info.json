@@ -1,0 +1,15 @@
+{
+    "appId": "webpack-demo",
+    "files": [
+        "!tsconfig.json",
+        "!webpack.config.js",
+        "!node_modules",
+        "build"
+    ],
+    "publish": [
+        "github"
+    ],
+    "icon": {
+        "win": "misc/icons/windows.ico"
+    }
+}
