@@ -43,33 +43,5 @@
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5"
-  },
-  "build": {
-    "appId": "webpack-demo",
-    "win": {
-      "target": "nsis",
-      "icon": "misc/icons/windows.ico",
-      "files": [
-        "!tsconfig.json",
-        "!webpack.config.js",
-        "!node_modules",
-        "build"
-      ],
-      "publish": [
-        "github"
-      ]
-    },
-    "linux": {
-      "target": "zip",
-      "files": [
-        "!tsconfig.json",
-        "!webpack.config.js",
-        "!node_modules",
-        "build"
-      ],
-      "publish": [
-        "github"
-      ]
-    }
   }
 }
