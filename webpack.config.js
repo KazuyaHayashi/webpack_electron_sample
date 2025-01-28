@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const mainProcessConfig = {
@@ -52,21 +52,23 @@ const rendererProcessConfig = {
     },
     target: 'electron-renderer',
     plugins: [
-        new CopyWebpackPlugin([
-            {
-                from: 'src/assets/img/',
-                to: '../assets/img/'
-            },
-            {
-                from: 'src/assets/style/',
-                to: '../assets/style/'
-            }
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'src/assets/img/',
+                    to: '../assets/img/'
+                },
+                {
+                    from: 'src/assets/style/',
+                    to: '../assets/style/'
+                }
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: 'src/html/index.html',
             filename: path.resolve(__dirname, 'build/html/index.html')
         }),
-        new HtmlWebpackIncludeAssetsPlugin({
+        new HtmlWebpackTagsPlugin({
             assets: ['assets/style/style.css'],
             append: false,
             publicPath: '../'
